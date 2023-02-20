@@ -23,16 +23,20 @@ export const MovieInfoDivTag = styled.div`
   left: 0;
   width: 100%;
   padding: 0.5rem 1rem;
-  background: #ebcb2f;
+  background: #FCC2FC;
   transform: translateY(100%);
   transition: var(--transition);
   & h4 {
-    color: var(--clr-white);
+    ${'' /* color: var(--clr-white); */}
+    color: brown;
     margin-bottom: 0.25rem;
   }
   & p {
     margin-bottom: 0;
-    color: var(--clr-white);
+    ${'' /* color: var(--clr-white); */}
+    color: black;
+    font-weight: 600;
+
   }
 `
 
@@ -59,6 +63,7 @@ export const MovieArticleTag = styled.article`
   overflow: hidden;
   margin: 0 2rem;
   border-radius: 1.2rem;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.5);
   @media (min-width: 450px) and (max-width: 665px) {
     margin: 0 6rem;
   }

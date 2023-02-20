@@ -5,6 +5,8 @@ const useFetch = (urlParams) => {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState({ show: false, msg: '' })
   const [data, setData] = useState(null)
+  const [timeout, updatedTimeout] = useState()
+
   const fetchMovies = async (url) => {
     setIsLoading(true)
     try {
@@ -25,7 +27,14 @@ const useFetch = (urlParams) => {
   }
 
   useEffect(() => {
-    fetchMovies(`${API_ENDPOINT}${urlParams}`)
+    // here using debouncing technique to limit the no. of APi calls
+    clearTimeout(timeout)
+
+    const timeoutId = setTimeout(()=>{
+      fetchMovies(`${API_ENDPOINT}${urlParams}`)
+    }, 500)
+
+    updatedTimeout(timeoutId)
   }, [urlParams])
   return { isLoading, error, data }
 }

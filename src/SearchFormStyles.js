@@ -13,7 +13,7 @@ export const SearchFormTag = styled.form`
 `
 export const SearchFormInputTag = styled.input`
   width: 100%;
-  border: 1px solid #ebcb2f;
+  border: 1px solid #FCC2FC;
   max-width: 400px;
   background: var(--clr-white);
   padding: 0.7rem;

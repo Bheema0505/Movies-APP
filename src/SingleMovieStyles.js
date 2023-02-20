@@ -56,7 +56,7 @@ export const SingleMovieInfoTag = styled.div`
             display: inline;
         }
 `
-export const SingleMovieAnchorTag = styled.div`
+export const SingleMovieLinkDivTag = styled.div`
  & a{
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
@@ -64,7 +64,7 @@ export const SingleMovieAnchorTag = styled.div`
     color: var(--clr-white);
     border-radius: var(--radius);
     display: inline-block;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     letter-spacing: var(--spacing);
 }
 `
@@ -79,7 +79,7 @@ export const SingleMoviePageErrorDivTag = styled.div`
     color: var(--clr-white);
     border-radius: var(--radius);
     display: inline-block;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     letter-spacing: var(--spacing);
   }
 `

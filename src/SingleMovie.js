@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams} from 'react-router-dom'
 import { LoadingDivTag } from './MoviesStyles'
-import { SingleMovieSectionTag, SingleMovieImageDivTag, SingleMovieImbdDivTag, SingleMovieInfoTag, SingleMovieTitleDiv, SingleMovieInfoDivTag, SingleMovieParaTag, SingleMovieAnchorTag, SingleMoviePageErrorDivTag } from './SingleMovieStyles'
+import { SingleMovieSectionTag, SingleMovieImageDivTag, SingleMovieImbdDivTag, SingleMovieInfoTag, SingleMovieTitleDiv, SingleMovieInfoDivTag, SingleMovieParaTag, SingleMovieLinkDivTag, SingleMoviePageErrorDivTag } from './SingleMovieStyles'
 import useFetch from './useFetch'
 import { Link } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ const SingleMovie = () => {
     return (
       <SingleMoviePageErrorDivTag>
         <h1>{error.msg}</h1>
-        <Link to='/' className='btn'>
+        <Link to='/'>
           back to movies
         </Link>
       </SingleMoviePageErrorDivTag>
@@ -40,11 +40,11 @@ const SingleMovie = () => {
           <SingleMovieInfoTag><h4>Cast : </h4> {Actors}</SingleMovieInfoTag>
         </div>
         {/* <div> */}
-          <SingleMovieAnchorTag>
+          <SingleMovieLinkDivTag>
           <Link to='/'>
             back to movies 
             </Link>
-          </SingleMovieAnchorTag>
+          </SingleMovieLinkDivTag>
         {/* </div> */}
       </SingleMovieInfoDivTag>
     </SingleMovieSectionTag>

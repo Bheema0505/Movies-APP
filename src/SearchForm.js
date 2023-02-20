@@ -11,7 +11,7 @@ const SearchForm = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      {error.show && <SearchFormErrorDivTag className='error'>{error.msg}</SearchFormErrorDivTag>}
+      {error.show && <SearchFormErrorDivTag>{error.msg}</SearchFormErrorDivTag>}
     </SearchFormTag>
   )
 }

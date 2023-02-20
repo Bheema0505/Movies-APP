@@ -1,11 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 // make sure to use https
 import useFetch from './useFetch'
 export const API_ENDPOINT = 'https://www.omdbapi.com/?apikey=4b6fcf9a'
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
-  const [query, setQuery] = useState('spider')
+  const [query, setQuery] = useState('batman')
   const { isLoading, error, data: movies } = useFetch(`&s=${query}`)
 
   return (

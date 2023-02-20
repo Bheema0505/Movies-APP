@@ -36,10 +36,29 @@ export const MovieInfoDivTag = styled.div`
   }
 `
 
-export const MovieAnchorTag = styled.a`
+// export const MovieAnchorTag = styled.a`
+//   position: relative;
+//   overflow: hidden;
+//   margin: 0 2rem;
+//   @media (min-width: 450px) and (max-width: 665px) {
+//     margin: 0 6rem;
+//   }
+//   & img {
+//     width: 100%;
+//     height: 400px;
+//     display: block;
+//     object-fit: cover;
+//   }
+//   &:hover ${MovieInfoDivTag} {
+//   transform: translateY(0);
+// }
+// `
+
+export const MovieArticleTag = styled.article`
   position: relative;
   overflow: hidden;
   margin: 0 2rem;
+  border-radius: 1.2rem;
   @media (min-width: 450px) and (max-width: 665px) {
     margin: 0 6rem;
   }
@@ -53,6 +72,29 @@ export const MovieAnchorTag = styled.a`
   transform: translateY(0);
 }
 `
+
+export const MovieAnchorTag = styled.div`
+& Link{
+  position: relative;
+  overflow: hidden;
+  margin: 0 2rem;
+  border-radius: 1.2rem;
+
+  @media (min-width: 450px) and (max-width: 665px) {
+    margin: 0 6rem;
+  }
+  & img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+  }
+  &:hover ${MovieInfoDivTag} {
+  transform: translateY(0);
+}
+}
+`
+
 export const MoviesSectionTag = styled.section`
   width: 90vw;
   max-width: var(--max-width);

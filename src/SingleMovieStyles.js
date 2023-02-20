@@ -56,7 +56,8 @@ export const SingleMovieInfoTag = styled.div`
             display: inline;
         }
 `
-export const SingleMovieAnchorTag = styled.a`
+export const SingleMovieAnchorTag = styled.div`
+ & a{
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
     background: var(--clr-primary-5);
@@ -65,9 +66,21 @@ export const SingleMovieAnchorTag = styled.a`
     display: inline-block;
     margin-top: 0.5rem;
     letter-spacing: var(--spacing);
+}
 `
 export const SingleMoviePageErrorDivTag = styled.div`
   text-align: center;
   padding: 2rem;
+
+  & a {
+    text-transform: capitalize;
+    padding: 0.25rem 0.5rem;
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+    border-radius: var(--radius);
+    display: inline-block;
+    margin-top: 0.5rem;
+    letter-spacing: var(--spacing);
+  }
 `
 

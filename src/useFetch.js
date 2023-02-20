@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 const API_ENDPOINT = 'https://www.omdbapi.com/?apikey=4b6fcf9a'
 
 const useFetch = (urlParams) => {
@@ -10,7 +10,7 @@ const useFetch = (urlParams) => {
     try {
       const response = await fetch(url)
       const data = await response.json()
-      console.log(data);
+
       if (data.Response === 'True') {
         setData(data.Search || data)
 
